@@ -1,14 +1,13 @@
-import ProductCard from "@/components/ProductCard";
-
+import PcBuilderCard from "@/components/PcBuilderCard";
 
 import React, { useEffect, useState } from "react";
 
-export default function Motherboard({ data }) {
+export default function Storage({ data }) {
   const [products, setProducts] = useState([...data?.data]);
 
   useEffect(() => {
     const filteredProducts = data?.data?.filter(
-      (product) => product?.category === "Motherboard"
+      (product) => product?.category === "Storage"
     );
     setProducts(filteredProducts);
   }, [data]);
@@ -17,7 +16,7 @@ export default function Motherboard({ data }) {
     <div className="container mx-auto my-5">
       <div className="grid grid-cols-3">
         {products?.map((product) => (
-          <ProductCard key={product?._id} product={product} />
+          <PcBuilderCard key={product?._id} product={product} />
         ))}
       </div>
     </div>

@@ -54,30 +54,30 @@ const components = [
 
 export default function NavMenu() {
   const categories = [
-    "Processor",
-    "Motherboard",
-    "Ram",
-    "Storage",
-    "Monitor",
-    "Power Supply",
+    "cpu",
+    "motherboard",
+    "ram",
+    "storage",
+    "monitor",
+    "powersupply",
+    "others",
   ];
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[400px] ">
-              {categories?.map((category,index) => (
+              {categories?.map((category, index) => (
                 <li key={index}>
                   <NavigationMenuLink asChild>
                     <Link
                       href={{
-                        pathname: "/products",
-                        query: { category },
+                        pathname: `/category/${category}`,
                       }}
                       className={
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        "block capitalize select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       }
                     >
                       {category}
@@ -86,8 +86,6 @@ export default function NavMenu() {
                 </li>
               ))}
             </ul>
-
-          
           </NavigationMenuContent>
         </NavigationMenuItem>
 

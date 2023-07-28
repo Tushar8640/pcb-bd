@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <MainMenu />
-      {children}
+      <main className="min-h-screen">{children}</main>
       <Footer />
     </>
   );
