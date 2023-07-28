@@ -25,17 +25,14 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  // Call an external API endpoint to get posts
+
   const res = await fetch("http://localhost:3000/api/products/");
   const data = await res.json();
 
-  // Get the paths we want to prerender based on posts
-  // In production environments, prerender all pages
-  // (slower builds, but faster initial page load)
+
   const paths = data?.data?.map((d) => ({
     params: { productId: d._id },
   }));
 
-  // { fallback: false } means other routes should 404
   return { paths, fallback: false };
 };

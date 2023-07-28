@@ -1,29 +1,21 @@
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-const uri =
-  "mongodb+srv://pcbuilder:TlANXAY8sMSd19zP@cluster0.vqk54.mongodb.net/products?retryWrites=true&w=majority";
+import db from "../db";
+import { ObjectId } from "mongodb";
 
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-
-async function run(req, res) {
+export default  async function handler(req, res) {
   try {
-    await client.connect();
+    const products = await db();
+
     const { productId } = req.query;
-    var id = new ObjectId(productId);
-    console.log(productId);
-    const products = await client.db("pcbuilder").collection("products");
+    const id = new ObjectId(productId);
 
     if (req.method === "GET") {
       const data = await products.findOne({ _id: id });
       res.send({ message: "success", status: 200, data: data });
     }
-  } finally {
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    res.status(500).send({ message: "Internal Server Error" });
   }
 }
 
-export default run;
+

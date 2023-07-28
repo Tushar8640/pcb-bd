@@ -1,23 +1,18 @@
 import ProductCard from "@/components/ProductCard";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-export default function Products({ data }) {
-  const router = useRouter();
-  const { category } = router.query;
+export default function Processor({ data }) {
 
   const [products, setProducts] = useState([...data?.data]);
 
   useEffect(() => {
-    if (category) {
+
       const filteredProducts = data?.data?.filter(
-        (product) => product?.category === category
+        (product) => product?.category === "processor"
       );
       setProducts(filteredProducts);
-    } else {
-      setProducts([...data?.data]);
-    }
-  }, [category, data]);
+
+  }, [data]);
   return (
     <div className="container mx-auto my-5">
       <div className="grid grid-cols-3">

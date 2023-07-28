@@ -5,8 +5,11 @@ export default async function handler(req, res) {
     const products = await db();
 
     if (req.method === "GET") {
-      const data = await products.find({}).toArray();
-      res.send({ message: "success", status: 200, data: data });
+      const randomProducts = await products
+        .aggregate([{ $sample: { size: 6 } }])
+        .toArray();
+
+      res.send({ message: "success", status: 200, data: randomProducts });
     }
   } catch (error) {
     console.error("Error fetching data:", error);
