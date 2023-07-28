@@ -1,10 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Button } from "./ui/button";
+import { useDispatch } from "react-redux";
+import { addToBuild } from "@/redux/pcbuilder/pcBuilderSlice";
 
 export default function PcBuilderCard({ product }) {
   const { image, productName, category, status, price, averageRating, _id } =
     product || {};
+  const dispatch = useDispatch();
+  const handleAddtoBuild = () => {
+    console.log(product);
+    dispatch(addToBuild(product));
+  };
   return (
     <div className="lg:w-1/4 md:w-1/2 p-4 w-full min-w-[400px] my-10">
       <img
@@ -18,7 +25,9 @@ export default function PcBuilderCard({ product }) {
         <h2 className="text-lg font-medium text-primary">The Catalyzer</h2>
         <p className="mt-1 text-foreground">{price}</p>
       </div>
-      <Button varient="outline">Select</Button>
+      <Button onClick={handleAddtoBuild} varient="outline">
+        Select
+      </Button>
     </div>
   );
 }
