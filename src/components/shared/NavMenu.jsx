@@ -104,9 +104,9 @@ export default function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/pc-builder" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+              Pc Builder
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -140,5 +140,3 @@ export const ListItem = React.forwardRef(
 );
 
 ListItem.displayName = "ListItem";
-
-
