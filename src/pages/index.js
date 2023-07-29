@@ -1,10 +1,10 @@
 import Banner from "@/components/Banner";
+import FeatureCategory from "@/components/FeatureCategory";
 import FeatureProducts from "@/components/FeatureProducts";
 import { BASE_URL } from "@/config/url";
 import { useSelector } from "react-redux";
 
 export default function Home({ data }) {
-
   const counter = useSelector((state) => state.pcbuilder);
   return (
     <div>
@@ -13,6 +13,7 @@ export default function Home({ data }) {
       </h1>
       <Banner />
       <FeatureProducts products={data?.data} />
+      <FeatureCategory />
     </div>
   );
 }

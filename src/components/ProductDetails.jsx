@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 export default function ProductDetails({ product }) {
@@ -7,10 +8,12 @@ export default function ProductDetails({ product }) {
   
   return (
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-      <img
+      <Image
+      width={500}
+      height={500}
         alt="ecommerce"
         className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-        src="https://dummyimage.com/400x400"
+        src={image}
       />
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h2 className="text-sm title-font text-primary tracking-widest">
