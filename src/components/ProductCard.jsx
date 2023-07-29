@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +12,9 @@ export default function ProductCard({ product }) {
         href={`/products/${_id}`}
         className="block relative h-48 rounded overflow-hidden"
       >
-        <img
+        <Image
+        width={300}
+        height={300}
           alt="ecommerce"
           className="object-cover object-center w-full h-full block"
           src={image}

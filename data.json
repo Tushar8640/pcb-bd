@@ -177,7 +177,7 @@
   },
   {
     "id": 9,
-    "image": "https://i.ibb.co/XF7Y6ys/ram-product-1.jpg",
+    "image": "https://i.ibb.co/5KbK1cX/vengeance-ddr5-02-500x500.jpg",
     "productName": "Corsair Vengeance LPX 16GB DDR4 RAM",
     "category": "Ram",
     "price": 2080,
@@ -199,7 +199,7 @@
   },
   {
     "id": 10,
-    "image": "https://i.ibb.co/yBZd5Wd/ram-product-2.jpg",
+    "image": "https://i.ibb.co/0m6xgxc/elite-u-dimm-ddr4-1-500x500.jpg",
     "productName": "G.Skill Trident Z RGB 32GB DDR4 RAM",
     "category": "Ram",
     "price": 2500,
@@ -222,7 +222,7 @@
   },
   {
     "id": 11,
-    "image": "https://i.ibb.co/2j47z6w/ram-product-3.jpg",
+    "image": "https://i.ibb.co/qpjXWmq/vengeance-16gb-01-500x500.webp",
     "productName": "Crucial Ballistix 8GB DDR4 RAM",
     "category": "Ram",
     "price": 2000,
@@ -245,7 +245,7 @@
   },
   {
     "id": 12,
-    "image": "https://i.ibb.co/2bQwFj6/monitor-product-1.jpg",
+    "image": "https://i.ibb.co/8m0QLQL/tuf-vg27aq1a-02-500x500.jpg",
     "productName": "Dell UltraSharp U2719D 27-Inch Monitor",
     "category": "Monitor",
     "price": 3500,
@@ -268,7 +268,7 @@
   },
   {
     "id": 13,
-    "image": "https://i.ibb.co/dgRxX0J/monitor-product-2.jpg",
+    "image": "https://i.ibb.co/S6fqJ8b/gmx27f4kwu-01-500x500.jpg",
     "productName": "ASUS ROG Swift PG279Q 27-Inch Gaming Monitor",
     "category": "Monitor",
     "price": 8000,
@@ -291,7 +291,7 @@
   },
   {
     "id": 14,
-    "image": "https://i.ibb.co/KVvNrvr/monitor-product-4.jpg",
+    "image": "https://i.ibb.co/VNXT447/27qn600-b-001-500x500.webp",
     "productName": "ViewSonic VX2458-C-MHD 24-Inch Curved Gaming Monitor",
     "category": "Monitor",
     "price": 2500,
@@ -314,7 +314,7 @@
   },
   {
     "id": 15,
-    "image": "https://i.ibb.co/WpTkQ4p/monitor-product-3.jpg",
+    "image": "https://i.ibb.co/8m0QLQL/tuf-vg27aq1a-02-500x500.jpg",
     "productName": "LG 34WN80C-B 34-Inch Ultrawide Monitor",
     "category": "Monitor",
     "price": 6000,
@@ -337,7 +337,7 @@
   },
   {
     "id": 16,
-    "image": "https://i.ibb.co/71V1HZG/storage-device-3.jpg",
+    "image": "https://i.ibb.co/zr0Pj7S/980-1tb-500x500-1.jpg",
     "productName": "SanDisk Extreme 1TB Portable SSD",
     "category": "Storage",
     "price": 2500,
@@ -360,7 +360,7 @@
   },
   {
     "id": 17,
-    "image": "https://i.ibb.co/h1k5J8q/storage-device-2.jpg",
+    "image": "https://i.ibb.co/zbzVVCg/980-pro-01-500x500.jpg",
     "productName": "Western Digital WD Red 6TB NAS Hard Drive",
     "category": "Storage",
     "price": 2000,
@@ -383,7 +383,7 @@
   },
   {
     "id": 18,
-    "image": "https://i.ibb.co/x8nrP3V/storage-device-1.jpg",
+    "image": "https://i.ibb.co/zr0Pj7S/980-1tb-500x500-1.jpg",
     "productName": "Samsung 970 EVO Plus 500GB NVMe SSD",
     "category": "Storage",
     "price": 1200,
@@ -406,7 +406,7 @@
   },
   {
     "id": 19,
-    "image": "https://i.ibb.co/BgS9jx5/power-supply-1.jpg",
+    "image": "https://i.ibb.co/GcjPFt3/cv750-80-plus-bronze-certified-01-500x500.jpg",
     "productName": "Corsair RM750x 750W 80+ Gold Power Supply",
     "category": "Powersupply",
     "price": 1300,
@@ -429,7 +429,7 @@
   },
   {
     "id": 20,
-    "image": "https://i.ibb.co/P9bfvJy/power-supply-2.jpg",
+    "image": "https://i.ibb.co/yBWXSGd/a650gf-500x500.jpg",
     "productName": "EVGA SuperNOVA 850 G3 850W 80+ Gold Power Supply",
     "category": "Powersupply",
     "price": 1700,
@@ -452,7 +452,7 @@
   },
   {
     "id": 21,
-    "image": "https://i.ibb.co/h1FjXmB/power-supply-3.jpg",
+    "image": "https://i.ibb.co/5GTNgQS/ud750gm-750w-01-500x500.webp",
     "productName": "Seasonic Focus GX-650 650W 80+ Gold Power Supply",
     "category": "Powersupply",
     "price": 1100,
@@ -475,7 +475,7 @@
   },
   {
     "id": 22,
-    "image": "https://i.ibb.co/0YFrR9T/mouse-1.jpg",
+    "image": "https://i.ibb.co/HCmvwy2/g304-01-500x500.png",
     "productName": "Logitech G502 HERO High-Performance Gaming Mouse",
     "category": "Others",
     "price": 1700,
@@ -498,8 +498,8 @@
   },
   {
     "id": 23,
-    "image": "https://i.ibb.co/4WnZpPr/mouse-2.jpg",
-    "productName": "Razer DeathAdder V2 Pro Wireless Gaming Mouse",
+    "image": "https://i.ibb.co/9Gxt9ky/geforce-gtx-1650-nb-4gd6-v3-v-01-500x500.webp",
+    "productName": "Razer DeathAdder V2 Pro Graphics Card",
     "category": "Others",
     "price": 1300,
     "status": "In stock",
@@ -521,7 +521,7 @@
   },
   {
     "id": 24,
-    "image": "https://i.ibb.co/7W1yZB2/keyboard-1.jpg",
+    "image": "https://i.ibb.co/Wnfyf0q/k63-compact-special-edition-500x500.jpg",
     "productName": "Corsair K70 RGB MK.2 Mechanical Gaming Keyboard",
     "category": "Others",
     "price": 1600,
