@@ -51,7 +51,7 @@ export default function ProductDetails({ product }) {
         <div className="flex mb-4">
           <span className="flex items-center">
             <Star />
-            <span className="text-gray-600 ml-3">{averageRating} ratings</span>
+            <span className="text-gray-600 ml-3 text-primary">{averageRating} ratings</span>
           </span>
           <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
             <a className="text-gray-500">
@@ -94,30 +94,29 @@ export default function ProductDetails({ product }) {
         </div>
         <p className="leading-relaxed text-primary">{description}</p>
         <div>
-          <h4 className="font-semibold text-lg my-2">Key Features :</h4>
-          
-         <div className="grid grid-cols-2">
-         <h2 className="text-lg title-font text-primary  tracking-widest">
-            Brand: {key_features?.brand}
-          </h2>
-         <h2 className="text-lg title-font text-primary  tracking-widest">
-            Brand: {key_features?.brand}
-          </h2>
-          <h2 className="text-lg title-font text-primary  tracking-widest">
-            Model: {key_features?.model}
-          </h2>
-          <h2 className="text-lg title-font text-primary  tracking-widest">
-            Color: {key_features?.color}
-          </h2>
-         </div>
+          <h4 className="font-semibold text-primary text-lg my-2">Key Features :</h4>
+
+          <div className="grid grid-cols-2 gap-2">
+            {Object.entries(key_features).map(([key, value]) => (
+              <h2
+                key={key}
+                className="text-lg title-font text-primary  tracking-widest"
+              >
+                <span className="font-semibold">{key}</span>: {value}
+             
+              </h2>
+            ))}
+
+        
+          </div>
         </div>
         <div></div>
         <div className="flex mt-5">
-          <span className="title-font font-medium text-2xl text-gray-900">
+          <span className="title-font font-medium text-2xl text-primary">
             ${price}
           </span>
           <Button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-            Button
+            Buy
           </Button>
           <Button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
             <svg
