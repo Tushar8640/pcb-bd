@@ -1,8 +1,10 @@
 import Banner from "@/components/Banner";
 import FeatureProducts from "@/components/FeatureProducts";
+import { BASE_URL } from "@/config/url";
 import { useSelector } from "react-redux";
 
 export default function Home({ data }) {
+
   const counter = useSelector((state) => state.pcbuilder);
   return (
     <div>
@@ -16,8 +18,7 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/featured-products");
+  const res = await fetch(`${BASE_URL}/api/featured-products`);
   const data = await res.json();
-  console.log(data);
   return { props: { data } };
 };

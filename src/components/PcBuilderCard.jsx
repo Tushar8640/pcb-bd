@@ -9,7 +9,6 @@ export default function PcBuilderCard({ product }) {
     product || {};
   const dispatch = useDispatch();
   const handleAddtoBuild = () => {
-    console.log(product);
     dispatch(addToBuild(product));
   };
   return (

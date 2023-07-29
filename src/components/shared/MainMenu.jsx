@@ -4,10 +4,10 @@ import { ThemeToggle } from "../theme-toggle";
 import { Github, TwitterIcon } from "lucide-react";
 import NavMenu from "./NavMenu";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { BASE_URL } from "@/config/url";
 
 export default function MainMenu() {
   const { data } = useSession();
-  console.log(data);
   return (
     <header className="bg-background  z-40 w-full border-b">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
@@ -25,7 +25,7 @@ export default function MainMenu() {
               <Button
                 onClick={() =>
                   signIn("github", {
-                    callbackUrl: "http://localhost:3000/",
+                    callbackUrl: `${BASE_URL}`,
                   })
                 }
               >

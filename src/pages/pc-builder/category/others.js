@@ -1,4 +1,5 @@
 import PcBuilderCard from "@/components/PcBuilderCard";
+import { BASE_URL } from "@/config/url";
 
 
 import React, { useEffect, useState } from "react";
@@ -25,7 +26,7 @@ export default function Others({ data }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch(`${BASE_URL}/api/products`);
   const data = await res.json();
   return { props: { data } };
 };

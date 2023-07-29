@@ -1,4 +1,5 @@
 import ProductCard from "@/components/ProductCard";
+import { BASE_URL } from "@/config/url";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
@@ -30,7 +31,7 @@ export default function Products({ data }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch(`${BASE_URL}/api/products`);
   const data = await res.json();
   return { props: { data } };
 };
