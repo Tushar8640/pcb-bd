@@ -5,6 +5,9 @@ const initialState = {
   motherboard: {},
   storage: {},
   ram: {},
+  powersupply: {},
+  monitor: {},
+  others: {},
 };
 
 export const pcBuilderSlice = createSlice({
@@ -26,10 +29,13 @@ export const pcBuilderSlice = createSlice({
           state.ram = action.payload;
           break;
         case "Power Supply":
-          state.ram = action.payload;
+          state.powersupply = action.payload;
+          break;
+        case "Monitor":
+          state.monitor = action.payload;
           break;
         case "Others":
-          state.ram = action.payload;
+          state.others = action.payload;
           break;
         default:
           break;

@@ -3,13 +3,16 @@ import React from "react";
 import { Button } from "./ui/button";
 import { useDispatch } from "react-redux";
 import { addToBuild } from "@/redux/pcbuilder/pcBuilderSlice";
+import { useRouter } from "next/router";
 
 export default function PcBuilderCard({ product }) {
   const { image, productName, category, status, price, averageRating, _id } =
     product || {};
+    const router = useRouter()
   const dispatch = useDispatch();
   const handleAddtoBuild = () => {
     dispatch(addToBuild(product));
+    router.push("/pc-builder")
   };
   return (
     <div className="lg:w-1/4 md:w-1/2 p-4 w-full min-w-[400px] my-10">

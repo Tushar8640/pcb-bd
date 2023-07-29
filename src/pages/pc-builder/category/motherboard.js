@@ -25,7 +25,7 @@ export default function Motherboard({ data }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${BASE_URL}/api/products`);
   const data = await res.json();
   return { props: { data } };

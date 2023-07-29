@@ -2,27 +2,53 @@ import PcBuilderItem from "@/components/PcBuilderItem";
 import { Button } from "@/components/ui/button";
 import { PlusSquare } from "lucide-react";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 /* eslint-disable @next/next/no-img-element */
 export default function PcBuilder() {
+  const { cpu, motherboard, storage, ram, powersupply, monitor, others } =
+    useSelector((state) => state.pcbuilder);
+
   return (
     <div className="container mx-auto flex justify-center w-full">
       <div className="flex flex-col w-[700px] p-6 space-y-4 sm:p-10 bg-secondary text-primary ">
         <h2 className="text-xl font-semibold">Your Build</h2>
         <ul className="flex flex-col divide-y divide-gray-300">
-          <PcBuilderItem title="Processor" link="/pc-builder/category/cpu" />
+          <PcBuilderItem
+            title="Processor"
+            link="/pc-builder/category/cpu"
+            product={cpu}
+          />
           <PcBuilderItem
             title="Motherboard"
             link="/pc-builder/category/motherboard"
+            product={motherboard}
           />
-          <PcBuilderItem title="Ram" link="/pc-builder/category/ram" />
-          <PcBuilderItem title="Monitor" link="/pc-builder/category/monitor" />
+          <PcBuilderItem
+            title="Ram"
+            link="/pc-builder/category/ram"
+            product={ram}
+          />
+          <PcBuilderItem
+            title="Monitor"
+            link="/pc-builder/category/monitor"
+            product={monitor}
+          />
           <PcBuilderItem
             title="Powersupply"
             link="/pc-builder/category/powersupply"
+            product={powersupply}
           />
-          <PcBuilderItem title="Storage" link="/pc-builder/category/storage" />
-          <PcBuilderItem title="Others" link="/pc-builder/category/others" />
+          <PcBuilderItem
+            title="Storage"
+            link="/pc-builder/category/storage"
+            product={storage}
+          />
+          <PcBuilderItem
+            title="Others"
+            link="/pc-builder/category/others"
+            product={others}
+          />
         </ul>
         <div className="space-y-1 text-right">
           <p>

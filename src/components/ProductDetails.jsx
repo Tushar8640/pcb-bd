@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export default function ProductDetails() {
+export default function ProductDetails({ product }) {
+  const { image, productName, category, status, price, averageRating, _id } =
+    product || {};
+  
   return (
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
       <img
@@ -10,11 +13,11 @@ export default function ProductDetails() {
         src="https://dummyimage.com/400x400"
       />
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-        <h2 className="text-sm title-font text-gray-500 tracking-widest">
-          BRAND NAME
+        <h2 className="text-sm title-font text-primary tracking-widest">
+          {category}
         </h2>
-        <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-          The Catcher in the Rye
+        <h1 className="text-primary text-3xl title-font font-medium mb-1">
+          {productName}
         </h1>
         <div className="flex mb-4">
           <span className="flex items-center">

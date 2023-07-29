@@ -1,6 +1,7 @@
 import PcBuilderCard from "@/components/PcBuilderCard";
 import { BASE_URL } from "@/config/url";
 
+
 import React, { useEffect, useState } from "react";
 
 export default function Monitor({ data }) {
@@ -24,7 +25,7 @@ export default function Monitor({ data }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${BASE_URL}/api/products`);
   const data = await res.json();
   return { props: { data } };
