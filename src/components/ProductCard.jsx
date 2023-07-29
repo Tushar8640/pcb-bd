@@ -14,12 +14,13 @@ export default function ProductCard({ product }) {
         <img
           alt="ecommerce"
           className="object-cover object-center w-full h-full block"
-          src="https://dummyimage.com/420x260"
+          src={image}
         />
       </Link>
       <div className="mt-4">
         <h3 className=" text-xs mb-1">{category}</h3>
-        <h2 className="text-lg font-medium text-primary">The Catalyzer</h2>
+        <h2 className="text-lg font-medium text-primary">{productName}</h2>
+        <p className="mt-1 text-foreground ">{status}</p>
         <p className="mt-1 text-foreground">{price}</p>
       </div>
     </div>
