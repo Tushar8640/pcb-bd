@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -29,8 +30,8 @@ export default function Banner() {
             hexagon try-hard chambray.
           </p>
           <div className="flex justify-center space-x-2">
-            <Button>Button</Button>
-            <Button varient="outline">Button</Button>
+            <Link href={"/products"}><Button>All Products</Button></Link>
+          
           </div>
         </div>
       </div>

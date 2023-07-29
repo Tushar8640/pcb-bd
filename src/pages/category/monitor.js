@@ -1,7 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import { BASE_URL } from "@/config/url";
 
-
 import React, { useEffect, useState } from "react";
 
 export default function Monitor({ data }) {
@@ -16,7 +15,7 @@ export default function Monitor({ data }) {
 
   return (
     <div className="container mx-auto my-5">
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {products?.map((product) => (
           <ProductCard key={product?._id} product={product} />
         ))}

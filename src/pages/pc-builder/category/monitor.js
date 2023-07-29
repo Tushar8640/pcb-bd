@@ -16,7 +16,7 @@ export default function Monitor({ data }) {
 
   return (
     <div className="container mx-auto my-5">
-      <div className="grid grid-cols-3">
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {products?.map((product) => (
           <PcBuilderCard key={product?._id} product={product} />
         ))}

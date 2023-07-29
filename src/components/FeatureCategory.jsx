@@ -22,7 +22,7 @@ export default function FeatureCategory() {
         <h1 className="text-center my-10 text-3xl text-primary font-semibold">
           Feature Category
         </h1>
-        <div className="grid grid-cols-4 place-items-center gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-4">
           {categories?.map((c, i) => (
             <Link
               key={i}
