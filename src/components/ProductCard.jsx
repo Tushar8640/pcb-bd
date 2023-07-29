@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
         width={300}
         height={300}
           alt="ecommerce"
-          className="object-cover object-center w-full h-full block"
+          className="object-fill"
           src={image}
         />
       </Link>

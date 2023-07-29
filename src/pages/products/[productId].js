@@ -1,18 +1,16 @@
-
 import ProductDetails from "@/components/ProductDetails";
 import Reviews from "@/components/Reviews";
 import { BASE_URL } from "@/config/url";
 
-
-
 export default function SingleProduct({ data }) {
-  console.log(data);
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 ">
-        <ProductDetails product={data?.data}/>
+        <ProductDetails product={data?.data} />
         <div>
-          <Reviews />
+          {data?.data?.reviews.map((review, i) => (
+            <Reviews key={i} review={review} />
+          ))}
         </div>
       </div>
     </section>
