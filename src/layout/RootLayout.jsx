@@ -5,7 +5,7 @@ import React from "react";
 export default function RootLayout({ children }) {
   return (
     <>
-      <MainMenu />
+      <MainMenu/>
       <main className="min-h-screen">{children}</main>
       <Footer />
     </>
