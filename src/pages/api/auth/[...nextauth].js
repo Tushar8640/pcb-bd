@@ -8,10 +8,4 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-
-  secret: "nosecret",
-  pages: {
-    signIn: "https://pcbuilder-mocha.vercel.app/api/auth/signin",
-  },
-  url: "https://pcbuilder-mocha.vercel.app",
 });

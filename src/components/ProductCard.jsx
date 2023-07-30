@@ -44,13 +44,13 @@ export default function ProductCard({ product }) {
               {status}
             </p>
             <p className="mt-1 text-foreground">${price}</p>
-            <p className="mt-1 text-foreground">
-              <span>
-                <Star />
-              </span>{" "}
-              ${averageRating}
-            </p>
           </div>
+          <p className=" text-foreground my-2 flex items-center">
+            <span>
+              <Star />
+            </span>
+            {averageRating}
+          </p>
           <Button className="mt-4 w-full">View Details</Button>
         </div>
       </Link>
