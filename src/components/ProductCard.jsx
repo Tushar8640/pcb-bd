@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
           <h3 className=" text-lg font-semibold mb-1">{category}</h3>
           <h2 className="text-lg font-medium text-primary">{productName}</h2>
           <div className="flex justify-between my-2">
-            <p className="mt-1 text-foreground bg-green-100 px-2 rounded">
+            <p className="mt-1 text-primary bg-green-100 px-2 rounded">
               {status}
             </p>
             <p className="mt-1 text-foreground">${price}</p>
