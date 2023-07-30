@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Button } from "./ui/button";
 import { useDispatch } from "react-redux";
@@ -7,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 export default function PcBuilderCard({ product }) {
-  const { image, productName, category, status, price, averageRating, _id } =
+  const { image, productName, category, status, price,  _id } =
     product || {};
   const router = useRouter();
   const dispatch = useDispatch();
