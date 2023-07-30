@@ -28,7 +28,7 @@ export const pcBuilderSlice = createSlice({
         case "Ram":
           state.ram = action.payload;
           break;
-        case "Power Supply":
+        case "Powersupply":
           state.powersupply = action.payload;
           break;
         case "Monitor":

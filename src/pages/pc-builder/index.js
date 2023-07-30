@@ -1,13 +1,42 @@
 import PcBuilderItem from "@/components/PcBuilderItem";
 import { Button } from "@/components/ui/button";
-import { PlusSquare } from "lucide-react";
-import Link from "next/link";
 import { useSelector } from "react-redux";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
+import { useEffect, useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
 export default function PcBuilder() {
   const { cpu, motherboard, storage, ram, powersupply, monitor, others } =
     useSelector((state) => state.pcbuilder);
+  const { toast } = useToast();
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    // Check if all the required components are not empty
+    if (
+      cpu._id &&
+      motherboard._id &&
+      storage._id &&
+      ram._id &&
+      powersupply._id &&
+      monitor
+    ) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [cpu, motherboard, storage, ram, powersupply, monitor]);
+
+  const handleBuild = () => {
+    if (!disabled) {
+      toast({
+        title: "Success",
+        description: "Your Build is complete",
+        action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
+      });
+    }
+  };
 
   return (
     <div className="container mx-auto flex justify-center w-full">
@@ -60,9 +89,12 @@ export default function PcBuilder() {
           </p>
         </div>
         <div className="flex justify-end space-x-4">
-          <Button varient="primary">
-            Back
-            <span className="sr-only sm:not-sr-only">to shop</span>
+          <Button
+            disabled={disabled}
+            varient="primary"
+            onClick={() => handleBuild()}
+          >
+            Complete build
           </Button>
         </div>
       </div>

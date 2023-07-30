@@ -49,6 +49,11 @@ export default function ProductDetails({ product }) {
           {productName}
         </h1>
         <div className="flex mb-4">
+
+          <span className="flex items-center">
+           
+            <span className="text-gray-600 ml-3 mr-3 bg-green-300 px-1 rounded text-primary">{status} </span>
+          </span>
           <span className="flex items-center">
             <Star />
             <span className="text-gray-600 ml-3 text-primary">{averageRating} ratings</span>

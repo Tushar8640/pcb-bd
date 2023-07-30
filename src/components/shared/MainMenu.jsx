@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Button, buttonVariants } from "../ui/button";
 import { ThemeToggle } from "../theme-toggle";
-import { Component, Github, List, LogIn, Menu, TwitterIcon } from "lucide-react";
+import {
+  Component,
+  Github,
+  Home,
+  List,
+  LogIn,
+  Menu,
+  TwitterIcon,
+} from "lucide-react";
 import NavMenu from "./NavMenu";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { BASE_URL } from "@/config/url";
@@ -65,8 +73,16 @@ export default function MainMenu() {
             <DropdownMenuContent className="w-56">
               <DropdownMenuGroup>
                 <DropdownMenuItem>
-                <Link href={"/pc-builder"} className="flex items-center"><Component className="mr-2 h-4 w-4" />
-                  <span>Pc Builder</span></Link>
+                  <Link href={"/"} className="flex items-center">
+                    <Home className="mr-2 h-4 w-4" />
+                    <span>Home</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href={"/pc-builder"} className="flex items-center">
+                    <Component className="mr-2 h-4 w-4" />
+                    <span>Pc Builder</span>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSub>
                   <DropdownMenuSubTrigger>
@@ -105,7 +121,7 @@ export default function MainMenu() {
                 <DropdownMenuItem
                   onClick={() =>
                     signIn("github", {
-                      callbackUrl: `${BASE_URL}`,
+                      callbackUrl: process.env.NEXTAUTH_URL,
                     })
                   }
                 >

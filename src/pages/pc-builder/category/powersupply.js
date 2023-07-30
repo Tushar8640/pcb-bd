@@ -9,7 +9,7 @@ export default function Posersupply({ data }) {
 
   useEffect(() => {
     const filteredProducts = data?.data?.filter(
-      (product) => product?.category === "Posersupply"
+      (product) => product?.category === "Powersupply"
     );
     setProducts(filteredProducts);
   }, [data]);
