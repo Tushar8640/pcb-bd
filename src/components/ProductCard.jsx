@@ -3,10 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
+import { Star } from "lucide-react";
 
 export default function ProductCard({ product }) {
-  const { image, productName, category, status, price, _id } =
+  const { image, productName, category, status, price, _id, reviews } =
     product || {};
+  function calculateAverageRating(reviews) {
+    if (reviews.length === 0) {
+      return 0;
+    }
+
+    const totalRatings = reviews.reduce(
+      (sum, review) => sum + review.rating,
+      0
+    );
+    const averageRating = totalRatings / reviews.length;
+
+    return averageRating.toFixed(1); // Return average rating with one decimal place
+  }
+
+  const averageRating = calculateAverageRating(reviews);
   return (
     <div className="lg:w-1/4 md:w-1/2 p-4 w-full min-w-[400px] border hover:shadow-md">
       <Link href={`/products/${_id}`}>
@@ -28,6 +44,12 @@ export default function ProductCard({ product }) {
               {status}
             </p>
             <p className="mt-1 text-foreground">${price}</p>
+            <p className="mt-1 text-foreground">
+              <span>
+                <Star />
+              </span>{" "}
+              ${averageRating}
+            </p>
           </div>
           <Button className="mt-4 w-full">View Details</Button>
         </div>

@@ -1,7 +1,7 @@
 import PcBuilderCard from "@/components/PcBuilderCard";
 import { BASE_URL } from "@/config/url";
-export default function Posersupply({ data }) {
 
+export default function Posersupply({ data }) {
   return (
     <div className="container mx-auto my-5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -18,6 +18,7 @@ export default function Posersupply({ data }) {
 
 export const getServerSideProps = async () => {
   const res = await fetch(`${BASE_URL}/api/products`);
+  console.log(BASE_URL);
   const data = await res.json();
   return { props: { data } };
 };
