@@ -5,7 +5,7 @@ import React from "react";
 import { Button } from "./ui/button";
 
 export default function ProductCard({ product }) {
-  const { image, productName, category, status, price, averageRating, _id } =
+  const { image, productName, category, status, price, _id } =
     product || {};
   return (
     <div className="lg:w-1/4 md:w-1/2 p-4 w-full min-w-[400px] border hover:shadow-md">
@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
           <h3 className=" text-lg font-semibold mb-1">{category}</h3>
           <h2 className="text-lg font-medium text-primary">{productName}</h2>
           <div className="flex justify-between my-2">
-            <p className="mt-1 text-primary bg-green-100 px-2 rounded">
+            <p className="mt-1 text-slate-600 bg-green-100 px-2 rounded">
               {status}
             </p>
             <p className="mt-1 text-foreground">${price}</p>
