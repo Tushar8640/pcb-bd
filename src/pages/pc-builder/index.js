@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/components/ui/use-toast";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 
 /* eslint-disable @next/next/no-img-element */
 export default function PcBuilder() {
@@ -13,13 +11,7 @@ export default function PcBuilder() {
     useSelector((state) => state.pcbuilder);
   const { toast } = useToast();
   const [disabled, setDisabled] = useState(true);
-  const { data: session } = useSession();
-  const router = useRouter();
-  useEffect(() => {
-    if (!session) {
-      router.push("/login");
-    }
-  }, [router, session]);
+  
   useEffect(() => {
     // Check if all the required components are not empty
 
@@ -88,15 +80,7 @@ export default function PcBuilder() {
             product={others}
           />
         </ul>
-        <div className="space-y-1 text-right">
-          <p>
-            Total amount:
-            <span className="font-semibold">357 €</span>
-          </p>
-          <p className="text-sm text-secondary-foreground">
-            Not including taxes and shipping costs
-          </p>
-        </div>
+       
         <div className="flex justify-end space-x-4">
           <Button
             disabled={disabled}
